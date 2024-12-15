@@ -6,7 +6,7 @@ export const getAllAnimals = async (req, res) => {
         res.json(animals)
     }
     catch (error) {
-        res.status(500).json({error: error.message})
+        res.status(500).json({error: "sadasdasdas" + error.message})
     }
 }
 
@@ -16,7 +16,7 @@ export const getAnimalById = async (req, res) => {
         const animal = await AnimalService.getAnimalById(id)
     }
     catch (error) {
-        res.status(500).json({error: error.message})
+        res.status(500).json({error: "dsada" +error.message})
     }
 }
 
@@ -27,7 +27,7 @@ export const getEndangeredAnimals = async (req, res) => {
         res.json(animals)
     }
     catch (error) {
-        res.status(500).json({error: error.message})
+        res.status(500).json({error: "dsaieasd" + error.message})
     }
 }
 
@@ -38,7 +38,7 @@ export const getAnimalsByHabitat = async (req, res) => {
         res.json(animals)
     }
     catch (error) {
-        res.status(500).json({error: error.message})
+        res.status(500).json({error: "dsadasdas" + error.message})
     }
 }
 
@@ -49,7 +49,7 @@ export const getAnimalsBySpecies = async (req, res) => {
         res.json(animals)
     }
     catch (error) {
-        res.status(500).json({error: error.message})
+        res.status(500).json({error: "dsadasdsa" + error.message})
     }
 }
 
@@ -60,7 +60,7 @@ export const addAnimal = async (req, res) => {
         res.status(201).json(newAnimal)
     }
     catch (error) {
-        res.status(500).json({error: error.message})
+        res.status(500).json({error: "dsadasdsa" + error.message})
     }
 }
 
@@ -69,12 +69,12 @@ export const updateAnimal = async (req, res) => {
         const id = parseInt(req.params.id)
         const animalData = req.body
         const updatedAnimal = await AnimalService.updateAnimal(id. animalData)
-        id(!updatedAnimal) {
-            res.status(404).json({error: error.message})
+        if(!updatedAnimal) {
+            res.status(404).json({error: "csaidjais  (updateAnimal function)"})
         }
     }
     catch (error) {
-        res.status(500).json({error: error.message})
+        res.status(500).json({error: "cos tam cos tam" + error.message})
     }
 }
 
@@ -82,13 +82,13 @@ export const deleteAnimal = async (req, res) => {
     try {
         const id = parseInt(req.params.id)
         const deleted = await AnimalService.deleteAnimal(id)
-        id(!deleted) {
-            res.status(404).json({error: error.message})
+        if(!deleted) {
+            res.status(404).json({error: "cos tam cos tam" + error.message})
         }
         res.status(204).json(deleted)
     }
     catch (error) {
-        res.status(500).json({error: error.message})
+        res.status(500).json({error: "cos tam cos tam" + error.message})
     }
 
 }

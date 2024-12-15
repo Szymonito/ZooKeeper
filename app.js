@@ -1,5 +1,5 @@
 import express from "express";
-import * as  AnimalController from "./controllers/AnimalController.js";
+import * as  AnimalController from "./controllers/AnimalsController.js";
 
 const app = express()
 
